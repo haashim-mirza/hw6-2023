@@ -7,6 +7,7 @@ window.addEventListener("load", function() {
 	console.log("Autoplay is set to " + video.autoplay);
 	video.loop = false;
 	console.log("Loop is set to " + video.loop);
+	document.querySelector("#volume").innerHTML = "100%";
 });
 
 document.querySelector("#play").addEventListener("click", function() {
@@ -39,8 +40,10 @@ document.querySelector("#mute").addEventListener("click", function() {
 	video.muted = !video.muted;
 	if (video.muted){
 		console.log("Mute")
+		document.querySelector("#mute").innerHTML = "Unmute";
 	}else{
 		console.log("Unmute")
+		document.querySelector("#mute").innerHTML = "Mute";
 	}
 });
 
