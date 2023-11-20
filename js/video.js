@@ -7,12 +7,12 @@ window.addEventListener("load", function() {
 	console.log("Autoplay is set to " + video.autoplay);
 	video.loop = false;
 	console.log("Loop is set to " + video.loop);
-	document.querySelector("#volume").innerHTML = "100%";
 });
 
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	document.querySelector("#volume").innerHTML = "100%";
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
